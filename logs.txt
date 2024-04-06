@@ -1,0 +1,30 @@
+PS C:\Users\Aleksandar PC\OneDrive\Desktop\FINKI\IV semestar\Softversko\SI_2024_lab1_223135> git log
+commit 39bc7508284572f47d1fad304fd6c06adbed846c (HEAD -> master, origin/master, origin/bug2, bug2)
+Author: Aleksandarj03 <138524804+Aleksandarj03@users.noreply.github.com>
+Date:   Sat Apr 6 23:10:55 2024 +0200
+
+    Fixed conflict
+
+commit 3140eb92f0fb19e48a85f7525321c3d904778fee
+Author: Aleksandarj03 <138524804+Aleksandarj03@users.noreply.github.com>
+Date:   Sat Apr 6 22:12:05 2024 +0200
+
+     Fix wrong condition in makeBigStringFrom
+
+commit b4529fc1143c83216f8c7d705774548beab82e2a (origin/bug1, bug1)
+Author: Aleksandarj03 <138524804+Aleksandarj03@users.noreply.github.com>
+Date:   Sat Apr 6 22:17:35 2024 +0200
+
+    Call method filterOddLengthStrings in main class
+
+commit 7a017148951923dba841fec8bb838c7a231acebc
+Author: Aleksandarj03 <138524804+Aleksandarj03@users.noreply.github.com>
+Date:   Sat Apr 6 22:06:50 2024 +0200
+
+    Fix wrong condition in filterOddLengthStrings
+
+commit c0ff1b40c8a766442bd896c0437cf38d569f30cf
+Author: Aleksandarj03 <138524804+Aleksandarj03@users.noreply.github.com>
+Date:   Sat Apr 6 21:44:10 2024 +0200
+
+    Add starter code

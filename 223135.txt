@@ -1,0 +1,51 @@
+4. Отвораме cmd во фолдерот кој е локално репо и внесуваме git init за git да ги следи промените кои се случуваат.
+5. Локалниот и remote репо се поврзуваат со командата git remote add, во мојот случај тоа е командата  git remote add origin https://github.com/Aleksandarj03/SI_2024_lab1_223135.git
+6. README датотеката ја додаваме на stage со git add README.md додека комитот го правиме со git commit -m "Initial commit"
+7. git add *.java, git commit -m "Add starter code"
+8. Синхронизацијата ја вршиме со git push origin master
+9 - 10. git branch bug2 - ја креираме гранката bug2, git checkout master - се враќаме на master бидејќи од неа треба да се разгрануваат двете гранки, git checkout -b bug1 - ја креираме гранката bug1 и се префрламе на неа
+11. git add SILab1_1.java, git commit -m "Fix wrong condition in filterOddLengthStrings"
+12. git checkout bug2
+13. git add SILab1_2.java, git commit -m " Fix wrong condition in makeBigStringFrom"
+14. git checkout bug1
+15. git add .\SILab1Main.java, git commit -m "Call method filterOddLengthStrings in main class"
+16. git checkout bug2
+17. git add .\SILab1Main.java, git commit -m "а Call method makeBigStringFrom in main class"
+18. git push bug1, git push bug2, на master немаме промени што значи дека немора да правиме push
+19. git checkout master
+20. git merge bug1 
+21. git push origin master
+22. git checkout bug2
+23. git rebase master bug2 - Оваа команда резултираше со конфликт во фајлот SILab1Main.java бидејќи во двете гранки во овој фајл има различна содржина односно:
+<<<<<<< HEAD
+        System.out.println(SILab1_1.filterOddLengthStrings(list));
+=======
+        System.out.println(SILab1_2.makeBigStringFrom(list));
+>>>>>>> dd61891 (а Call method makeBigStringFrom in main class)
+јас одлучив да ги оставам двата повици кон статичките методи од соодветните класи односно по исправката на конфликтот класата изгледа вака:
+public class SILab1Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+
+        List<String> list = new ArrayList<>();
+
+        for (int i = 0; i < n; i++) {
+            list.add(sc.next());
+        }
+        System.out.println(SILab1_1.filterOddLengthStrings(list));
+        System.out.println(SILab1_2.makeBigStringFrom(list));
+
+    }
+}
+
+по направената промена повторно правиме add на фајлот и git rebase --continue
+
+24. git checkout master
+25. git merge bug2
+26 - 27. bug1 и master ги синхронизираме со git push origin master и git push bug1 соодветно но за bug2 треба да се искористи --force
+28. git add logs.txt, git add 223135.txt, git commit -m "Final commit"
+29. git push origin master
+
+
